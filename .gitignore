@@ -1,0 +1,19 @@
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+dist/
+
+# Mac
+.DS_Store
