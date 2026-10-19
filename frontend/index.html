@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pathwise – Your Path to Global Education Starts Here</title>
+  <meta name="description" content="Pathwise guides students from profile evaluation to cost planning, CV building, and verified-source counseling for studying abroad.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: {
+            navy: { 900: '#0A1F44', 800: '#0F2A5C', 700: '#173A7A' },
+            accent: { DEFAULT: '#F5A524', dark: '#D98A0B' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    dialog[open] { animation: pop .18s ease-out; }
+    @keyframes pop { from { opacity: 0; transform: translateY(8px) scale(.98); } to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { dialog[open] { animation: none; } }
+  </style>
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-navy-900/95 backdrop-blur border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2 text-white font-extrabold text-xl tracking-tight focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <rect width="28" height="28" rx="8" fill="#F5A524"/>
+          <path d="M7 20c4-1 5-5 7-8s4-3 7-4" stroke="#0A1F44" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="21" cy="8" r="2.2" fill="#0A1F44"/>
+        </svg>
+        Pathwise
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300" aria-label="Main">
+        <a href="#profile" class="hover:text-white transition-colors">Profile</a>
+        <a href="#costs" class="hover:text-white transition-colors">Costs</a>
+        <a href="#counselor" class="hover:text-white transition-colors">AI Counselor</a>
+        <a href="#documents" class="hover:text-white transition-colors">CV &amp; SOP</a>
+      </nav>
+      <button type="button" data-open-onboarding
+        class="bg-accent hover:bg-accent-dark text-navy-900 font-bold text-sm px-5 py-2.5 rounded-lg shadow-lg shadow-accent/20 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+        Get Started
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="bg-navy-900 text-white overflow-hidden">
+      <div class="max-w-6xl mx-auto px-5 py-16 md:py-24 grid lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <h1 class="text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold leading-[1.08] tracking-tight">
+            Your Path to Global Education Starts Here
+          </h1>
+          <p class="mt-6 text-lg text-slate-300 max-w-xl leading-relaxed">
+            Tell us about your grades, English score, and budget. Pathwise evaluates your profile, calculates the real cost of studying abroad, builds your CV, and answers your questions with sources you can check.
+          </p>
+          <div class="mt-9 flex flex-wrap items-center gap-4">
+            <button type="button" data-open-onboarding
+              class="bg-accent hover:bg-accent-dark text-navy-900 font-bold px-7 py-3.5 rounded-xl shadow-xl shadow-accent/25 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+              Start Evaluation
+            </button>
+            <a href="#profile" class="text-slate-200 hover:text-white font-semibold px-2 py-3 underline underline-offset-4 decoration-white/30 hover:decoration-white">See what you get</a>
+          </div>
+          <ul class="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-400">
+            <li>Profile Evaluation</li>
+            <li>Cost Calculator</li>
+            <li>CV Builder</li>
+            <li>AI Counselor</li>
+          </ul>
+        </div>
+
+        <!-- Sample profile preview -->
+        <div class="relative">
+          <div class="absolute -inset-4 bg-gradient-to-tr from-navy-700/60 to-transparent rounded-3xl blur-2xl" aria-hidden="true"></div>
+          <div class="relative bg-white text-slate-700 rounded-2xl shadow-2xl p-6 sm:p-7" role="img" aria-label="Sample profile dashboard preview">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-sm text-slate-500">Sample profile</p>
+                <p class="text-lg font-bold text-navy-900">Readiness for Germany</p>
+              </div>
+              <span class="text-xs font-semibold bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full">Strong fit</span>
+            </div>
+            <div class="mt-6 space-y-5 text-sm">
+              <div>
+                <div class="flex justify-between font-semibold text-slate-600"><span>Academic GPA</span><span>3.7 / 4.0</span></div>
+                <div class="mt-2 h-2.5 bg-slate-100 rounded-full"><div class="h-full w-[92%] bg-navy-700 rounded-full"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between font-semibold text-slate-600"><span>IELTS</span><span>7.0 / 9.0</span></div>
+                <div class="mt-2 h-2.5 bg-slate-100 rounded-full"><div class="h-full w-[78%] bg-navy-700 rounded-full"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between font-semibold text-slate-600"><span>Budget coverage</span><span>64%</span></div>
+                <div class="mt-2 h-2.5 bg-slate-100 rounded-full"><div class="h-full w-[64%] bg-accent rounded-full"></div></div>
+                <p class="mt-1.5 text-xs text-slate-500">Part-time work could cover about 18% of your total expense.</p>
+              </div>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-100 grid grid-cols-3 gap-3 text-center text-xs">
+              <div class="rounded-lg bg-slate-50 py-3"><p class="font-bold text-navy-900 text-sm">12</p><p class="text-slate-500">Programs</p></div>
+              <div class="rounded-lg bg-slate-50 py-3"><p class="font-bold text-navy-900 text-sm">7</p><p class="text-slate-500">Universities</p></div>
+              <div class="rounded-lg bg-slate-50 py-3"><p class="font-bold text-navy-900 text-sm">9</p><p class="text-slate-500">Documents</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="bg-slate-50 py-20 md:py-24">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-navy-900 tracking-tight">Everything you need before you apply</h2>
+          <p class="mt-4 text-lg text-slate-600">Four tools that follow you from first idea to submitted application.</p>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-2 gap-6">
+          <article id="profile" class="scroll-mt-24 bg-white rounded-2xl p-7 border border-slate-200 hover:border-navy-700/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-2xl" aria-hidden="true">📊</div>
+            <h3 class="mt-5 text-xl font-bold text-navy-900">Academic Profile Dashboard</h3>
+            <p class="mt-2 text-slate-600 leading-relaxed">See how your GPA, English score, and budget compare with each destination. Get matched programs and universities, plus clear next steps.</p>
+          </article>
+
+          <article id="costs" class="scroll-mt-24 bg-white rounded-2xl p-7 border border-slate-200 hover:border-navy-700/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-2xl" aria-hidden="true">💰</div>
+            <h3 class="mt-5 text-xl font-bold text-navy-900">Complete Cost Estimation</h3>
+            <p class="mt-2 text-slate-600 leading-relaxed">See every cost of studying in your chosen country in BDT: tuition, accommodation, food, living, flights, visa, and insurance. Then see the average part-time earnings there and how much of your total expense they could recover.</p>
+          </article>
+
+          <article id="counselor" class="scroll-mt-24 bg-white rounded-2xl p-7 border border-slate-200 hover:border-navy-700/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center text-2xl" aria-hidden="true">🤖</div>
+            <h3 class="mt-5 text-xl font-bold text-navy-900">Verified Source AI Counselor</h3>
+            <p class="mt-2 text-slate-600 leading-relaxed">Ask about visas, deadlines, or scholarships. Every answer comes with the official source it was taken from, so you can check it yourself.</p>
+          </article>
+
+          <article id="documents" class="scroll-mt-24 bg-white rounded-2xl p-7 border border-slate-200 hover:border-navy-700/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-2xl" aria-hidden="true">📝</div>
+            <h3 class="mt-5 text-xl font-bold text-navy-900">Multi-Region CV/SOP Builder</h3>
+            <p class="mt-2 text-slate-600 leading-relaxed">Build your CV in US, European, or Canadian style, get your SOP reviewed, and see exactly which documents each application needs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing CTA -->
+    <section class="bg-navy-800 text-white py-16">
+      <div class="max-w-3xl mx-auto px-5 text-center">
+        <h2 class="text-3xl font-extrabold tracking-tight">Know where you stand in two minutes</h2>
+        <p class="mt-3 text-slate-300">Answer four questions and we’ll build your starting profile.</p>
+        <button type="button" data-open-onboarding
+          class="mt-8 bg-accent hover:bg-accent-dark text-navy-900 font-bold px-8 py-3.5 rounded-xl transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+          Start Evaluation
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-navy-900 text-slate-400 text-sm">
+    <div class="max-w-6xl mx-auto px-5 py-8 flex flex-col sm:flex-row justify-between gap-2">
+      <p class="font-semibold text-slate-200">Pathwise</p>
+      <p>Built as a capstone project. Always confirm requirements with official university and government sources.</p>
+    </div>
+  </footer>
+
+  <!-- Onboarding modal -->
+  <dialog id="onboarding" aria-labelledby="onb-title"
+    class="w-[calc(100%-2rem)] max-w-lg rounded-2xl p-0 shadow-2xl backdrop:bg-navy-900/70 backdrop:backdrop-blur-sm">
+
+    <!-- Form state -->
+    <form id="onb-form" novalidate class="p-6 sm:p-8">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <h2 id="onb-title" class="text-2xl font-extrabold text-navy-900 tracking-tight">Start your evaluation</h2>
+          <p class="mt-1 text-sm text-slate-500">Four quick details to build your starting profile.</p>
+        </div>
+        <button type="button" data-close aria-label="Close"
+          class="text-slate-400 hover:text-slate-700 rounded-lg p-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-navy-700">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+
+      <div class="mt-6 space-y-5">
+        <div>
+          <label for="destination" class="block text-sm font-semibold text-slate-700">Target destination</label>
+          <select id="destination" name="destination" required
+            class="mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2.5 focus:outline-none focus:border-navy-700 focus:ring-2 focus:ring-navy-700/20">
+            <option value="">Choose a country</option>
+          </select>
+          <p class="err mt-1 text-xs text-red-600 hidden" data-for="destination">Choose a destination.</p>
+        </div>
+
+        <div>
+          <label for="gpa" class="block text-sm font-semibold text-slate-700">Academic GPA (out of 4.00)</label>
+          <input id="gpa" name="gpa" type="number" inputmode="decimal" step="0.01" min="0" max="4" required placeholder="e.g. 3.65"
+            class="mt-1.5 w-full rounded-lg border border-slate-300 px-3.5 py-2.5 focus:outline-none focus:border-navy-700 focus:ring-2 focus:ring-navy-700/20">
+          <p class="err mt-1 text-xs text-red-600 hidden" data-for="gpa">Enter a GPA between 0 and 4.00.</p>
+        </div>
+
+        <div>
+          <span class="block text-sm font-semibold text-slate-700">English proficiency</span>
+          <div class="mt-1.5 grid grid-cols-[7.5rem_1fr] gap-3">
+            <select id="test" name="test" aria-label="Test type"
+              class="rounded-lg border border-slate-300 bg-white px-3 py-2.5 focus:outline-none focus:border-navy-700 focus:ring-2 focus:ring-navy-700/20">
+              <option value="IELTS">IELTS</option>
+              <option value="TOEFL">TOEFL</option>
+            </select>
+            <input id="score" name="score" type="number" inputmode="decimal" step="0.5" min="0" max="9" required placeholder="e.g. 6.5" aria-label="English score"
+              class="rounded-lg border border-slate-300 px-3.5 py-2.5 focus:outline-none focus:border-navy-700 focus:ring-2 focus:ring-navy-700/20">
+          </div>
+          <p class="err mt-1 text-xs text-red-600 hidden" data-for="score" id="score-err">Enter an IELTS score between 0 and 9.</p>
+        </div>
+
+        <div>
+          <label for="budget" class="block text-sm font-semibold text-slate-700">Estimated annual budget (BDT)</label>
+          <div class="relative mt-1.5">
+            <span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" aria-hidden="true">৳</span>
+            <input id="budget" name="budget" type="number" inputmode="numeric" step="10000" min="100000" required placeholder="e.g. 1500000"
+              class="w-full rounded-lg border border-slate-300 pl-8 pr-3.5 py-2.5 focus:outline-none focus:border-navy-700 focus:ring-2 focus:ring-navy-700/20">
+          </div>
+          <p class="err mt-1 text-xs text-red-600 hidden" data-for="budget">Enter a budget of at least ৳100,000.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-col-reverse sm:flex-row sm:justify-end gap-3">
+        <button type="button" data-close
+          class="px-5 py-2.5 rounded-lg font-semibold text-slate-600 hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-navy-700">Cancel</button>
+        <button type="submit"
+          class="px-6 py-2.5 rounded-lg font-bold bg-navy-800 hover:bg-navy-700 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2">Build my profile</button>
+      </div>
+    </form>
+
+    <!-- Success state -->
+    <div id="onb-done" class="hidden p-6 sm:p-8 text-center">
+      <div class="mx-auto w-14 h-14 rounded-full bg-emerald-50 flex items-center justify-center text-2xl" aria-hidden="true">✅</div>
+      <h2 class="mt-4 text-2xl font-extrabold text-navy-900 tracking-tight">Profile saved</h2>
+      <p class="mt-1 text-sm text-slate-500">Here is what we captured.</p>
+      <dl id="summary" class="mt-6 text-left text-sm rounded-xl bg-slate-50 divide-y divide-slate-200"></dl>
+      <p class="mt-4 text-xs text-slate-500">Your dashboard will open here once the backend is connected.</p>
+      <button type="button" data-close
+        class="mt-6 px-6 py-2.5 rounded-lg font-bold bg-navy-800 hover:bg-navy-700 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2">Done</button>
+    </div>
+  </dialog>
+
+  <script>
+    (function () {
+      var DESTINATIONS = ['USA', 'Canada', 'UK', 'Germany']; // add more countries here
+      var destSel = document.getElementById('destination');
+      DESTINATIONS.forEach(function (c) { var o = document.createElement('option'); o.textContent = c; destSel.appendChild(o); });
+      var dlg = document.getElementById('onboarding');
+      var form = document.getElementById('onb-form');
+      var done = document.getElementById('onb-done');
+      var test = document.getElementById('test');
+      var score = document.getElementById('score');
+      var scoreErr = document.getElementById('score-err');
+
+      function openModal() {
+        form.classList.remove('hidden');
+        done.classList.add('hidden');
+        dlg.showModal();
+      }
+      function closeModal() { dlg.close(); }
+
+      document.querySelectorAll('[data-open-onboarding]').forEach(function (b) {
+        b.addEventListener('click', openModal);
+      });
+      dlg.querySelectorAll('[data-close]').forEach(function (b) {
+        b.addEventListener('click', closeModal);
+      });
+      // Close when the dark backdrop is clicked
+      dlg.addEventListener('click', function (e) { if (e.target === dlg) closeModal(); });
+
+      // Switch score limits between IELTS and TOEFL
+      function syncTest() {
+        if (test.value === 'IELTS') {
+          score.max = 9; score.step = 0.5; score.placeholder = 'e.g. 6.5';
+          scoreErr.textContent = 'Enter an IELTS score between 0 and 9.';
+        } else {
+          score.max = 120; score.step = 1; score.placeholder = 'e.g. 90';
+          scoreErr.textContent = 'Enter a TOEFL score between 0 and 120.';
+        }
+      }
+      test.addEventListener('change', syncTest);
+      syncTest();
+
+      function validField(el) {
+        var ok = el.value !== '' && el.checkValidity();
+        var msg = form.querySelector('.err[data-for="' + el.id + '"]');
+        if (msg) msg.classList.toggle('hidden', ok);
+        el.classList.toggle('border-red-500', !ok);
+        el.setAttribute('aria-invalid', ok ? 'false' : 'true');
+        return ok;
+      }
+
+      ['destination', 'gpa', 'score', 'budget'].forEach(function (id) {
+        document.getElementById(id).addEventListener('blur', function (e) { validField(e.target); });
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var fields = ['destination', 'gpa', 'score', 'budget'].map(function (id) { return document.getElementById(id); });
+        var results = fields.map(validField);
+        if (results.indexOf(false) !== -1) {
+          fields[results.indexOf(false)].focus();
+          return;
+        }
+
+        var profile = {
+          destination: fields[0].value,
+          gpa: parseFloat(fields[1].value),
+          englishTest: test.value,
+          englishScore: parseFloat(fields[2].value),
+          annualBudgetBDT: parseInt(fields[3].value, 10)
+        };
+
+        // TODO (Django step): send `profile` to the backend with fetch() here.
+        console.log('Onboarding profile:', profile);
+
+        var rows = [
+          ['Destination', profile.destination],
+          ['GPA', profile.gpa.toFixed(2) + ' / 4.00'],
+          [profile.englishTest, String(profile.englishScore)],
+          ['Annual budget', '৳' + profile.annualBudgetBDT.toLocaleString('en-IN')]
+        ];
+        var dl = document.getElementById('summary');
+        dl.innerHTML = '';
+        rows.forEach(function (r) {
+          var row = document.createElement('div');
+          row.className = 'flex justify-between px-4 py-3';
+          var dt = document.createElement('dt');
+          dt.className = 'text-slate-500';
+          dt.textContent = r[0];
+          var dd = document.createElement('dd');
+          dd.className = 'font-semibold text-navy-900';
+          dd.textContent = r[1];
+          row.appendChild(dt); row.appendChild(dd);
+          dl.appendChild(row);
+        });
+
+        form.classList.add('hidden');
+        done.classList.remove('hidden');
+        form.reset();
+        syncTest();
+      });
+    })();
+  </script>
+</body>
+</html>
