@@ -1,12 +1,149 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sign in · PathWise</title>
     <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <main class="auth-shell"><aside class="auth-aside"><a class="brand" href="index.html"><span class="brand-mark">P</span><span>Path<em>Wise</em></span></a><div class="auth-aside-copy"><span class="tag gold">WELCOME BACK</span><h2 class="serif">Your next chapter is worth planning well.</h2><p>Pick up where you left off. Keep your program shortlist, financial plan and application steps moving in one place.</p></div><div class="auth-quote">“A thoughtful plan turns a big ambition into smaller, achievable steps.”</div></aside><section class="auth-main"><div class="auth-form-wrap"><a class="brand" href="index.html" style="margin-bottom:38px"><span class="brand-mark">P</span><span>Path<em>Wise</em></span></a><div class="eyebrow" style="margin-bottom:12px">YOUR WORKSPACE AWAITS</div><h1>Welcome back</h1><p class="muted">Sign in to continue planning your master's journey.</p><form id="loginForm" class="auth-form" novalidate><div class="field"><label for="email">Email address</label><input id="email" type="email" placeholder="you@example.com" autocomplete="email" required><span id="emailError" class="form-error">Enter a valid email address.</span></div><div class="field"><label for="password">Password</label><div class="password-wrap"><input id="password" type="password" placeholder="Enter your password" autocomplete="current-password" required><button class="show-pass" type="button" data-toggle-password="password">Show</button></div><span id="passwordError" class="form-error">Enter your password.</span></div><div style="display:flex;justify-content:space-between;align-items:center"><label class="checkline"><input type="checkbox" id="remember"> Keep me signed in</label><a href="#" id="forgotPassword" style="font-size:11px;color:#9a742f;font-weight:800" onclick="event.preventDefault();document.getElementById('formNotice').className='notice show info';document.getElementById('formNotice').textContent='Password recovery will be added after the authentication flow is complete.'">Forgot password?</a></div><div id="formNotice" class="notice"></div><button class="btn btn-primary" type="submit">Sign in to PathWise <span>→</span></button></form><div class="auth-bottom">New to PathWise? <a href="register.html">Create an account</a></div><p class="muted" style="font-size:10px;text-align:center;margin-top:28px">By continuing, you agree to use PathWise responsibly and verify important details with official sources.</p></div></section></main><script src="app.js"></script>
-  </body>
+</head>
+
+<body>
+
+    <main class="auth-shell">
+
+        <aside class="auth-aside">
+
+            <a class="brand" href="index.html">
+                <span class="brand-mark">P</span>
+                <span>Path<em>Wise</em></span>
+            </a>
+
+            <div class="auth-aside-copy">
+                <span class="tag gold">WELCOME BACK</span>
+
+                <h2 class="serif">
+                    Your next chapter is worth planning well.
+                </h2>
+
+                <p>
+                    Pick up where you left off. Keep your program shortlist,
+                    financial plan and application steps moving in one place.
+                </p>
+            </div>
+
+            <div class="auth-quote">
+                “A thoughtful plan turns a big ambition into smaller, achievable steps.”
+            </div>
+
+        </aside>
+
+        <section class="auth-main">
+
+            <div class="auth-form-wrap">
+
+                <a class="brand" href="index.html" style="margin-bottom:38px">
+                    <span class="brand-mark">P</span>
+                    <span>Path<em>Wise</em></span>
+                </a>
+
+                <div class="eyebrow" style="margin-bottom:12px">
+                    YOUR WORKSPACE AWAITS
+                </div>
+
+                <h1>Welcome back</h1>
+
+                <p class="muted">
+                    Sign in to continue planning your master's journey.
+                </p>
+
+                <form id="loginForm" class="auth-form" novalidate>
+
+                    <div class="field">
+                        <label for="email">Email address</label>
+
+                        <input
+                            id="email"
+                            type="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                        <span id="emailError" class="form-error">
+                            Enter a valid email address.
+                        </span>
+                    </div>
+
+                    <div class="field">
+                        <label for="password">Password</label>
+
+                        <div class="password-wrap">
+                            <input
+                                id="password"
+                                type="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                class="show-pass"
+                                type="button"
+                                data-toggle-password="password"
+                            >
+                                Show
+                            </button>
+                        </div>
+
+                        <span id="passwordError" class="form-error">
+                            Enter your password.
+                        </span>
+                    </div>
+
+                    <div style="display:flex;justify-content:space-between;align-items:center">
+
+                        <label class="checkline">
+                            <input type="checkbox" id="remember">
+                            Keep me signed in
+                        </label>
+
+                        <a
+                            href="#"
+                            id="forgotPassword"
+                            style="font-size:11px;color:#9a742f;font-weight:800"
+                            onclick="event.preventDefault();document.getElementById('formNotice').className='notice show info';document.getElementById('formNotice').textContent='Password recovery will be added after the authentication flow is complete.'"
+                        >
+                            Forgot password?
+                        </a>
+
+                    </div>
+
+                    <div id="formNotice" class="notice"></div>
+
+                    <button class="btn btn-primary" type="submit">
+                        Sign in to PathWise <span>→</span>
+                    </button>
+
+                </form>
+
+                <div class="auth-bottom">
+                    New to PathWise?
+                    <a href="register.html">Create an account</a>
+                </div>
+
+                <p class="muted" style="font-size:10px;text-align:center;margin-top:28px">
+                    By continuing, you agree to use PathWise responsibly
+                    and verify important details with official sources.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
 </html>
