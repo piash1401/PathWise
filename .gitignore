@@ -1,4 +1,4 @@
-# Secrets and local settings
+# Environment variables and secrets
 .env
 .env.*
 !.env.example
@@ -9,6 +9,11 @@ venv/
 __pycache__/
 *.py[cod]
 
+# Django
+db.sqlite3
+media/
+staticfiles/
+
 # Node / Next.js
 node_modules/
 .next/
@@ -17,3 +22,6 @@ dist/
 
 # Mac
 .DS_Store
+
+# IDE
+.vscode/
