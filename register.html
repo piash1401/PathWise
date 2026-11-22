@@ -1,10 +1,211 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Create account · PathWise</title>
     <link rel="stylesheet" href="styles.css">
-  </head>
-  <body><main class="auth-shell"><aside class="auth-aside"><a class="brand" href="index.html"><span class="brand-mark">P</span><span>Path<em>Wise</em></span></a><div class="auth-aside-copy"><span class="tag gold">START WITH YOUR STORY</span><h2 class="serif">Big goals begin with one clear step.</h2><p>Create your workspace to organise your academic profile, explore master's opportunities and understand the financial side of studying abroad.</p><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:24px"><span class="tag" style="background:#ffffff18;color:#e6edf4">Program discovery</span><span class="tag" style="background:#ffffff18;color:#e6edf4">Scholarship planning</span><span class="tag" style="background:#ffffff18;color:#e6edf4">Cost clarity</span></div></div><div class="auth-quote">Designed to help students make informed decisions — not promises of admission, funding or visas.</div></aside><section class="auth-main"><div class="auth-form-wrap"><a class="brand" href="index.html" style="margin-bottom:31px"><span class="brand-mark">P</span><span>Path<em>Wise</em></span></a><div class="eyebrow" style="margin-bottom:12px">CREATE YOUR WORKSPACE</div><h1>Create your account</h1><p class="muted">A few details to get your study-abroad plan started.</p><form id="registerForm" class="auth-form" novalidate><div class="field"><label for="fullName">Full name</label><input id="fullName" type="text" placeholder="Your full name" autocomplete="name" required><span id="nameError" class="form-error">Please enter your full name.</span></div><div class="field"><label for="email">Email address</label><input id="email" type="email" placeholder="you@example.com" autocomplete="email" required><span id="emailError" class="form-error">Enter a valid email address.</span></div><div class="field"><label for="password">Create password</label><div class="password-wrap"><input id="password" type="password" placeholder="At least 8 characters" autocomplete="new-password" required><button class="show-pass" type="button" data-toggle-password="password">Show</button></div><span id="passwordError" class="form-error">Use at least 8 characters.</span></div><div class="field"><label for="confirmPassword">Confirm password</label><div class="password-wrap"><input id="confirmPassword" type="password" placeholder="Enter your password again" autocomplete="new-password" required><button class="show-pass" type="button" data-toggle-password="confirmPassword">Show</button></div><span id="confirmError" class="form-error">Your passwords do not match.</span></div><label class="checkline"><input id="terms" type="checkbox"><span>I agree to the <a href="#" style="color:#9a742f;font-weight:800">terms of use</a> and understand that PathWise guidance does not guarantee admission, scholarships or visas.</span></label><span id="termsError" class="form-error">Please accept to continue.</span><div id="formNotice" class="notice"></div><button class="btn btn-primary" type="submit">Create my account <span>→</span></button></form><div class="auth-bottom">Already have an account? <a href="login.html">Sign in</a></div></div></section></main><script src="app.js"></script>
-  </body>
+</head>
+
+<body>
+
+    <main class="auth-shell">
+
+        <aside class="auth-aside">
+
+            <a class="brand" href="index.html">
+                <span class="brand-mark">P</span>
+                <span>Path<em>Wise</em></span>
+            </a>
+
+            <div class="auth-aside-copy">
+
+                <span class="tag gold">START WITH YOUR STORY</span>
+
+                <h2 class="serif">
+                    Big goals begin with one clear step.
+                </h2>
+
+                <p>
+                    Create your workspace to organise your academic profile,
+                    explore master's opportunities and understand the financial
+                    side of studying abroad.
+                </p>
+
+                <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:24px">
+
+                    <span class="tag" style="background:#ffffff18;color:#e6edf4">
+                        Program discovery
+                    </span>
+
+                    <span class="tag" style="background:#ffffff18;color:#e6edf4">
+                        Scholarship planning
+                    </span>
+
+                    <span class="tag" style="background:#ffffff18;color:#e6edf4">
+                        Cost clarity
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="auth-quote">
+                Designed to help students make informed decisions — not promises
+                of admission, funding or visas.
+            </div>
+
+        </aside>
+
+        <section class="auth-main">
+
+            <div class="auth-form-wrap">
+
+                <a class="brand" href="index.html" style="margin-bottom:31px">
+                    <span class="brand-mark">P</span>
+                    <span>Path<em>Wise</em></span>
+                </a>
+
+                <div class="eyebrow" style="margin-bottom:12px">
+                    CREATE YOUR WORKSPACE
+                </div>
+
+                <h1>Create your account</h1>
+
+                <p class="muted">
+                    A few details to get your study-abroad plan started.
+                </p>
+
+                <form id="registerForm" class="auth-form" novalidate>
+
+                    <div class="field">
+                        <label for="fullName">Full name</label>
+
+                        <input
+                            id="fullName"
+                            type="text"
+                            placeholder="Your full name"
+                            autocomplete="name"
+                            required
+                        >
+
+                        <span id="nameError" class="form-error">
+                            Please enter your full name.
+                        </span>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email address</label>
+
+                        <input
+                            id="email"
+                            type="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                        <span id="emailError" class="form-error">
+                            Enter a valid email address.
+                        </span>
+                    </div>
+
+                    <div class="field">
+                        <label for="password">Create password</label>
+
+                        <div class="password-wrap">
+
+                            <input
+                                id="password"
+                                type="password"
+                                placeholder="At least 8 characters"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                class="show-pass"
+                                type="button"
+                                data-toggle-password="password"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                        <span id="passwordError" class="form-error">
+                            Use at least 8 characters.
+                        </span>
+                    </div>
+
+                    <div class="field">
+                        <label for="confirmPassword">Confirm password</label>
+
+                        <div class="password-wrap">
+
+                            <input
+                                id="confirmPassword"
+                                type="password"
+                                placeholder="Enter your password again"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                class="show-pass"
+                                type="button"
+                                data-toggle-password="confirmPassword"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                        <span id="confirmError" class="form-error">
+                            Your passwords do not match.
+                        </span>
+                    </div>
+
+                    <label class="checkline">
+
+                        <input id="terms" type="checkbox">
+
+                        <span>
+                            I agree to the
+                            <a href="#" style="color:#9a742f;font-weight:800">
+                                terms of use
+                            </a>
+                            and understand that PathWise guidance does not
+                            guarantee admission, scholarships or visas.
+                        </span>
+
+                    </label>
+
+                    <span id="termsError" class="form-error">
+                        Please accept to continue.
+                    </span>
+
+                    <div id="formNotice" class="notice"></div>
+
+                    <button class="btn btn-primary" type="submit">
+                        Create my account <span>→</span>
+                    </button>
+
+                </form>
+
+                <div class="auth-bottom">
+                    Already have an account?
+                    <a href="login.html">Sign in</a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
 </html>
