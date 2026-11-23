@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PathWise · Student workspace</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="extra.css">
+</head>
+<body>
+<div class="app-shell">
+
+<!-- ============================== SIDEBAR ============================== -->
+<aside class="sidebar">
+  <a class="brand" href="index.html"><span class="brand-mark">P</span><span>Path<em>Wise</em></span></a>
+  <div class="nav-label">Workspace</div>
+  <nav>
+    <a class="side-link active" href="#overview" data-section="overview"><span class="ico">▦</span>Overview</a>
+    <a class="side-link" href="#profile" data-section="profile"><span class="ico">◎</span>My profile</a>
+    <a class="side-link" href="#programs" data-section="programs"><span class="ico">⌕</span>Find programs</a>
+    <a class="side-link" href="#scholarships" data-section="scholarships"><span class="ico">✧</span>Scholarships</a>
+    <a class="side-link" href="#costs" data-section="costs"><span class="ico">৳</span>Cost planner</a>
+  </nav>
+  <div class="nav-label">My journey</div>
+  <nav>
+    <a class="side-link" href="#counsellor" data-section="counsellor"><span class="ico">◉</span>AI counsellor</a>
+    <a class="side-link" href="#documents" data-section="documents"><span class="ico">▤</span>CV &amp; SOP review</a>
+    <a class="side-link" href="#applications" data-section="applications"><span class="ico">✓</span>Applications</a>
+  </nav>
+  <div class="side-bottom">
+    <div class="nav-label">ACCOUNT</div>
+    <a class="side-link" href="#settings" data-section="settings"><span class="ico">⚙</span>Settings</a>
+    <div class="profile-mini"><div class="avatar">PW</div><div><strong>Student</strong><small>Student account</small></div></div>
+  </div>
+</aside>
+
+<div class="main-area">
+<header class="app-top">
+  <div class="crumb">Workspace <span style="padding:0 7px;color:#c2cbd4">/</span><strong id="currentSection">Overview</strong></div>
+  <div class="top-right">
+    <span class="tag green hide-mobile"><span class="dot"></span> Planning workspace</span>
+    <button id="logoutBtn" class="btn btn-outline btn-sm">Sign out</button>
+  </div>
+</header>
+
+<main class="main-content">
+
+<!-- ============================== OVERVIEW ============================== -->
+<section class="content-view active" id="overview" data-title="Overview">
+  <div class="welcome-row">
+    <div>
+      <div class="eyebrow" style="margin-bottom:9px" id="todayLine"></div>
+      <h1>Welcome</h1>
+      <p>Your study-abroad journey, organised in one place. Here is where things stand.</p>
+    </div>
+    <a class="btn btn-primary" href="#profile" data-go="profile" id="overviewCta">Complete my profile <span>→</span></a>
+  </div>
+
+  <div class="stats-grid">
+    <div class="card stat-card"><div class="stat-top"><span class="stat-label">Profile completion</span><span class="stat-symbol">◎</span></div><div class="stat-value" id="statProfile">–</div><div class="stat-foot" id="statProfileFoot">Loading…</div></div>
+    <div class="card stat-card"><div class="stat-top"><span class="stat-label">Programs in database</span><span class="stat-symbol">⌕</span></div><div class="stat-value" id="statPrograms">–</div><div class="stat-foot">Across 4 destinations</div></div>
+    <div class="card stat-card"><div class="stat-top"><span class="stat-label">My applications</span><span class="stat-symbol">✓</span></div><div class="stat-value" id="statApps">–</div><div class="stat-foot">In your tracker</div></div>
+    <div class="card stat-card"><div class="stat-top"><span class="stat-label">Next deadline</span><span class="stat-symbol">◷</span></div><div class="stat-value" id="statDeadline" style="font-size:18px">–</div><div class="stat-foot" id="statDeadlineFoot">From your tracker</div></div>
+  </div>
+
+  <div class="dashboard-grid">
+    <div class="card panel-pad">
+      <div class="panel-head"><div><h2>Your best matches</h2><p class="section-sub">Ranked by eligibility, budget, destination and field</p></div><a href="#programs" data-go="programs">See all ↗</a></div>
+      <div id="overviewMatches"><p class="muted small">Loading…</p></div>
+    </div>
+    <div class="card panel-pad">
+      <div class="panel-head"><div><h2>Next steps</h2><p class="section-sub">Based on what is missing</p></div><span class="tag gold">Checklist</span></div>
+      <div id="overviewSteps"></div>
+      <p class="muted small" style="margin-top:18px">Program requirements, tuition and deadlines change. Always verify key details on the official website.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== PROFILE ============================== -->
+<section class="content-view" id="profile" data-title="My profile">
+  <div class="welcome-row">
+    <div>
+      <div class="eyebrow">YOUR INFORMATION</div>
+      <h1>My student profile</h1>
+      <p>Choose how you want to give us your details. You can always edit them afterwards.</p>
+    </div>
+    <span class="tag gold" id="profileCompletion">0% complete</span>
+  </div>
+
+  <div class="choice-grid">
+    <button type="button" class="choice-card active" data-profile-mode="cv">
+      <span class="choice-icon">▤</span>
+      <strong>Upload my CV</strong>
+      <small>PDF, DOCX or TXT. We read it and fill the form for you. You check everything before saving.</small>
+    </button>
+    <button type="button" class="choice-card" data-profile-mode="form">
+      <span class="choice-icon">✎</span>
+      <strong>Fill in the form</strong>
+      <small>Type your details yourself. Takes about 3 minutes.</small>
+    </button>
+  </div>
+
+  <div class="card panel-pad" id="cvPanel">
+    <div class="panel-head"><h2>Import from your CV</h2><span class="tag blue">Your file is not stored</span></div>
+    <label class="dropzone" for="cvFile" id="cvDrop">
+      <span class="choice-icon">⇪</span>
+      <strong id="cvFileName">Choose a file or drop it here</strong>
+      <small>PDF, DOCX or TXT · up to 5 MB · text-based files work best</small>
+      <input type="file" id="cvFile" accept=".pdf,.docx,.txt" hidden>
+    </label>
+    <div style="display:flex;gap:10px;align-items:center;margin-top:14px;flex-wrap:wrap">
+      <button type="button" class="btn btn-primary" id="cvImportBtn">Read my CV</button>
+      <span class="muted small" id="cvStatus"></span>
+    </div>
+    <div id="cvBanner" class="banner" hidden></div>
+  </div>
+
+  <div class="card panel-pad" style="margin-top:16px">
+    <div class="panel-head"><h2>Profile details</h2></div>
+    <form id="studentProfileForm" novalidate>
+
+      <h3 class="form-h">Personal</h3>
+      <div class="form-grid">
+        <div class="field"><label>Full name</label><input type="text" id="profileFullName" readonly></div>
+        <div class="field"><label>Email address</label><input type="email" id="profileEmail" readonly></div>
+        <div class="field"><label for="phone">Phone</label><input type="text" id="phone" placeholder="+880 1XXX-XXXXXX" maxlength="30"></div>
+      </div>
+
+      <h3 class="form-h">Academic background</h3>
+      <div class="form-grid">
+        <div class="field"><label for="highestDegree">Highest degree</label><input type="text" id="highestDegree" placeholder="e.g. Bachelor's degree" required></div>
+        <div class="field"><label for="fieldOfStudy">Field of study</label><input type="text" id="fieldOfStudy" placeholder="e.g. Software Engineering" required></div>
+        <div class="field"><label for="institution">Institution</label><input type="text" id="institution" placeholder="Your university name" required></div>
+        <div class="field"><label for="graduationYear">Graduation year</label><input type="number" id="graduationYear" min="1900" max="2100" placeholder="e.g. 2027" required></div>
+        <div class="field"><label for="grade">CGPA / GPA</label><input type="number" id="grade" step="0.01" min="0" placeholder="e.g. 3.50" required></div>
+        <div class="field"><label for="gradeScale">Grade scale</label><input type="number" id="gradeScale" step="0.01" min="0.01" placeholder="e.g. 4.00" required></div>
+      </div>
+
+      <h3 class="form-h">What do you want to study?</h3>
+      <div class="form-grid">
+        <div class="field"><label for="targetField">Target field</label><input type="text" id="targetField" placeholder="e.g. Data Science" maxlength="150"></div>
+        <div class="field"><label for="skills">Skills (comma separated)</label><input type="text" id="skills" placeholder="Python, Django, SQL"></div>
+        <div class="field"><label for="workMonths">Work experience (months)</label><input type="number" id="workMonths" min="0" max="600" value="0"></div>
+        <div class="field"><label for="intake">Preferred intake</label>
+          <select id="intake"><option value="">No preference</option><option value="winter">Winter / Fall</option><option value="summer">Summer / Spring</option></select>
+        </div>
+      </div>
+
+      <h3 class="form-h">English proficiency</h3>
+      <div class="form-grid">
+        <div class="field"><label for="englishTest">English test</label>
+          <select id="englishTest"><option value="">Not taken yet</option><option value="IELTS">IELTS</option><option value="TOEFL">TOEFL</option><option value="PTE">PTE</option><option value="Other">Other</option></select>
+        </div>
+        <div class="field"><label for="overallScore">Overall score</label><input type="number" id="overallScore" step="0.01" min="0" placeholder="e.g. 7.00"></div>
+      </div>
+
+      <h3 class="form-h">Money (BDT)</h3>
+      <div class="form-grid">
+        <div class="field"><label for="annualBudget">Annual budget</label><input type="number" id="annualBudget" min="0" step="1000" placeholder="What you can spend per year" required></div>
+        <div class="field"><label for="savings">Personal savings</label><input type="number" id="savings" min="0" step="1000" value="0"></div>
+        <div class="field"><label for="familySupport">Family support</label><input type="number" id="familySupport" min="0" step="1000" value="0"></div>
+        <div class="field"><label for="educationLoan">Education loan</label><input type="number" id="educationLoan" min="0" step="1000" value="0"></div>
+      </div>
+
+      <h3 class="form-h">Destinations</h3>
+      <div class="check-row">
+        <label class="check-pill"><input type="checkbox" name="destinationPreferences" value="Germany"> 🇩🇪 Germany</label>
+        <label class="check-pill"><input type="checkbox" name="destinationPreferences" value="UK"> 🇬🇧 United Kingdom</label>
+        <label class="check-pill"><input type="checkbox" name="destinationPreferences" value="Canada"> 🇨🇦 Canada</label>
+        <label class="check-pill"><input type="checkbox" name="destinationPreferences" value="USA"> 🇺🇸 United States</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="margin-top:22px">Save profile</button>
+      <p id="profileMessage" class="form-msg"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================== PROGRAMS ============================== -->
+<section class="content-view" id="programs" data-title="Find programs">
+  <div class="welcome-row">
+    <div><div class="eyebrow">PROGRAM DISCOVERY</div><h1>Find your next program</h1><p>Search master's programs, or let PathWise rank them for you.</p></div>
+    <span class="tag blue">Master's programs</span>
+  </div>
+  <div class="card panel-pad">
+    <div class="form-grid" style="margin-bottom:14px">
+      <div class="field"><label for="programSearch">Search program, university or city</label><input id="programSearch" placeholder="e.g. Data Science"></div>
+      <div class="field"><label for="programCountry">Destination</label>
+        <select id="programCountry"><option value="">All destinations</option><option value="Germany">Germany</option><option value="UK">United Kingdom</option><option value="Canada">Canada</option><option value="USA">United States</option></select>
+      </div>
+    </div>
+    <div class="seg" id="programMode">
+      <button type="button" class="seg-btn active" data-mode="all">All programs</button>
+      <button type="button" class="seg-btn" data-mode="recommended">Recommended for me</button>
+    </div>
+    <p class="muted small" id="programHint" style="margin:10px 0 0"></p>
+  </div>
+  <div id="programList" class="stack"></div>
+</section>
+
+<!-- ============================== SCHOLARSHIPS ============================== -->
+<section class="content-view" id="scholarships" data-title="Scholarships">
+  <div class="welcome-row"><div><div class="eyebrow">FUNDING DISCOVERY</div><h1>Scholarship opportunities</h1><p>Understand what each award offers and check the official page before you apply.</p></div></div>
+  <div id="scholarshipList" class="stack"></div>
+</section>
+
+<!-- ============================== COSTS ============================== -->
+<section class="content-view" id="costs" data-title="Cost planner">
+  <div class="welcome-row"><div><div class="eyebrow">FINANCIAL PLANNING</div><h1>Plan your study budget</h1><p>See the full cost in taka, how much a part-time job could recover, and the visa funds you must show.</p></div></div>
+  <div class="card panel-pad">
+    <div class="form-grid">
+      <div class="field"><label for="costProgram">Program (optional)</label><select id="costProgram"><option value="">Use a country average instead</option></select></div>
+      <div class="field"><label for="costCountry">Country</label>
+        <select id="costCountry"><option value="Germany">Germany</option><option value="UK">United Kingdom</option><option value="Canada">Canada</option><option value="USA">United States</option></select>
+      </div>
+      <div class="field"><label for="costCity">City (optional)</label><input id="costCity" placeholder="e.g. London"></div>
+      <div class="field"><label for="costHours">Part-time hours per week</label><input id="costHours" type="number" min="0" max="40" value="10"></div>
+      <div class="field"><label for="costJobSearch">Months to find a job</label><input id="costJobSearch" type="number" min="0" max="12" value="3"></div>
+    </div>
+    <button id="estimateButton" class="btn btn-primary" style="margin-top:18px">Calculate my cost</button>
+    <p class="muted small" id="costMsg" style="margin-top:10px"></p>
+  </div>
+  <div id="costResult" class="stack"></div>
+</section>
+
+<!-- ============================== AI ASSISTANT ============================== -->
+<section class="content-view" id="counsellor" data-title="AI assistant">
+  <div class="welcome-row"><div><div class="eyebrow">AI ASSISTANT</div><h1>Ask PathWise AI</h1><p>Chat about study abroad or anything else. Facts come with sources, and your numbers come from the PathWise engines.</p></div></div>
+  <div class="cx">
+    <aside class="cx-side">
+      <button id="cxNew" class="btn btn-primary btn-sm" type="button" style="width:100%">＋ New chat</button>
+      <div id="cxList" class="cx-list"></div>
+      <div id="cxStatus" class="cx-status"></div>
+    </aside>
+    <div class="cx-main card">
+      <div id="cxLog" class="cx-log" aria-live="polite"></div>
+      <div id="cxChips" class="chips" style="padding:0 18px">
+        <button type="button" class="chip cx-example">Which universities should I consider?</button>
+        <button type="button" class="chip cx-example">How much will studying in Germany cost me?</button>
+        <button type="button" class="chip cx-example">What is the latest scholarship news for Bangladeshi students?</button>
+        <button type="button" class="chip cx-example">Explain what a statement of purpose should include</button>
+      </div>
+      <div class="cx-input">
+        <textarea id="cxInput" rows="2" maxlength="2000" placeholder="Ask anything. Enter to send, Shift+Enter for a new line."></textarea>
+        <button id="cxSend" class="btn btn-primary" type="button">Send</button>
+        <button id="cxStop" class="btn btn-outline" type="button" hidden>Stop</button>
+      </div>
+      <p class="muted small" style="margin:0;padding:0 18px 14px">AI can make mistakes. It is guidance, not an official decision. Check important details on the linked official sources. Your messages and a short summary of your profile (degree, CGPA, budget, preferences) are sent to a free AI provider (Google or Groq) to write answers. Your name, email and phone are not sent. Never share passwords or API keys here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== DOCUMENTS ============================== -->
+<section class="content-view" id="documents" data-title="CV & SOP review">
+  <div class="welcome-row"><div><div class="eyebrow">APPLICATION DOCUMENTS</div><h1>CV &amp; statement of purpose</h1><p>Get a checklist of improvements. The reviewer never invents achievements for you.</p></div></div>
+  <div class="card panel-pad">
+    <div class="form-grid">
+      <div class="field"><label for="docType">Document</label><select id="docType"><option value="cv">CV / Resume</option><option value="sop">Statement of purpose</option></select></div>
+      <div class="field" id="docStyleField"><label for="docStyle">CV style</label>
+        <select id="docStyle"><option value="general">General</option><option value="europe">Europe (Germany)</option><option value="uk">United Kingdom</option><option value="canada">Canada</option><option value="us">United States</option></select></div>
+      <div class="field"><label for="docFile">Upload a file (PDF, DOCX, TXT)</label><input type="file" id="docFile" accept=".pdf,.docx,.txt"></div>
+    </div>
+    <div class="field" style="margin-top:14px"><label for="docText">…or paste the text</label><textarea id="docText" rows="6" placeholder="Paste your CV or SOP here"></textarea></div>
+    <button id="docReviewBtn" class="btn btn-primary" style="margin-top:16px">Review my document</button>
+    <p class="muted small" id="docMsg" style="margin-top:10px"></p>
+  </div>
+  <div id="docResult" class="stack"></div>
+</section>
+
+<!-- ============================== APPLICATIONS ============================== -->
+<section class="content-view" id="applications" data-title="Applications">
+  <div class="welcome-row"><div><div class="eyebrow">APPLICATION TRACKER</div><h1>My applications</h1><p>Keep deadlines, documents and stages organised. Add programs from “Find programs”.</p></div>
+    <a class="btn btn-primary" href="#programs" data-go="programs">＋ Add application</a></div>
+  <div id="appSummary" class="summary-row"></div>
+  <div id="appList" class="stack"></div>
+</section>
+
+<!-- ============================== SETTINGS ============================== -->
+<section class="content-view" id="settings" data-title="Settings">
+  <div class="welcome-row"><div><div class="eyebrow">ACCOUNT</div><h1>Account settings</h1><p>Your account and how PathWise handles your data.</p></div></div>
+  <div class="card panel-pad" style="max-width:720px">
+    <div class="panel-head"><h2>Your account</h2></div>
+    <p class="small"><strong id="setName"></strong><br><span class="muted" id="setEmail"></span></p>
+    <div class="panel-head" style="margin-top:22px"><h2>Privacy</h2></div>
+    <ul class="plain-list small muted">
+      <li>CV files are read in memory to fill your form and are not stored.</li>
+      <li>Your profile is stored in the PathWise database and is only visible to your account.</li>
+      <li>To write AI answers, your question and a short summary of your profile (degree, CGPA, budget, preferences) are sent to a free AI provider (Google Gemini or Groq). Your name, email and phone are never sent.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<nav class="mobile-bar">
+  <a class="active" href="#overview" data-section="overview"><span>▦</span>Home</a>
+  <a href="#programs" data-section="programs"><span>⌕</span>Programs</a>
+  <a href="#costs" data-section="costs"><span>৳</span>Costs</a>
+  <a href="#applications" data-section="applications"><span>✓</span>Tracker</a>
+  <a href="#profile" data-section="profile"><span>◎</span>Profile</a>
+</nav>
+</div>
+</div>
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+<script src="dashboard.js"></script>
+<script src="chat.js"></script>
+</body>
+</html>
